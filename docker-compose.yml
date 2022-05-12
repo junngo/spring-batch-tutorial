@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mysql:
+    container_name: spring_batch
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: "spring_batch"
+      MYSQL_ROOT_PASSWORD: "password1234"
+      TZ: "Asia/Seoul"
+    ports:
+      - "3306:3306"
+    command:
+      - "--character-set-server=utf8mb4"
+      - "--collation-server=utf8mb4_unicode_ci"
